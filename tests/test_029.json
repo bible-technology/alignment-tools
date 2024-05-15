@@ -1,0 +1,25 @@
+{
+    "format": "alignment",
+    "version": "0.3",
+    "groups": [
+        {
+            "type": "translation",
+            "meta": {
+                "creator": "some-aligner"
+            },
+            "documents": [
+                {"scheme": "...", "docid": "..."},
+                {"scheme": "...", "docid": "..."}
+            ],
+            "roles": ["source", "target"],
+            "records": [
+                {
+                    "references": [["selector1", "selector2"], ["selector3"]],
+                    "meta": {
+                        "confidence": 0.9
+                    }
+                }
+            ]
+        }
+    ]
+}

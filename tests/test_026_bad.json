@@ -1,0 +1,21 @@
+{
+    "format": "alignment",
+    "version": "0.3",
+    "records": [
+        {
+            "type": "translation",
+            "references": [{
+                "scheme": "my-scheme",
+                "docid": "1",
+                "selectors": "selector1"
+            }, {
+                "scheme": "my-scheme",
+                "docid": "2",
+                "selectors": "selector1"
+            }],
+            "meta": {
+                "creator": "some-aligner"
+            }
+        }
+    ]
+}

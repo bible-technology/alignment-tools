@@ -1,0 +1,18 @@
+{
+    "format": "alignment",
+    "version": "0.3",
+    "groups": [
+        {
+            "type": "translation",
+            "meta": {
+                "creator": "some-aligner"
+            },
+            "records": [
+                {
+                    "source": {},
+                    "target": {}
+                }
+            ]
+        }
+    ]
+}

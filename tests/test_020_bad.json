@@ -1,0 +1,19 @@
+{
+    "format": "alignment",
+    "version": "0.3",
+    "records": [
+        {
+            "type": "translation",
+            "references": [{
+                "scheme": "my-scheme",
+                "selectors": ["selector1", "selector2"]
+            }, {
+                "scheme": "my-scheme",
+                "selectors": ["selector1"]
+            }],
+            "meta": {
+                "creator": "some-aligner"
+            }
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "format": "alignment",
+    "version": "0.3",
+    "records": [
+        {
+            "type": "translation",
+            "references": {}
+        }
+    ]
+}
