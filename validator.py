@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import json
 
 
@@ -39,8 +41,8 @@ def validate(filename):
     for record in data.get("records", []):
         if not isinstance(record, dict):
             return (6, 'Each record must be a dictionary')
-        if "type" not in record:
-            return (7, 'Each record must have a "type"')
+        # if "type" not in record:
+        #     return (7, 'Each record must have a "type"')
         if not isinstance(record.get("meta", {}), dict):
             return (8, 'If "meta" is present on a record, it must be a dictionary')
         if not isinstance(record.get("references", []), list):
@@ -64,3 +66,12 @@ def validate(filename):
                     return result
 
     return True
+
+
+if __name__ == "__main__":
+    import sys
+    result = validate(sys.argv[1])
+    if result is True:
+        print("Valid")
+    else:
+        print("Invalid:", result)
