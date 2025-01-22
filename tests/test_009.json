@@ -1,14 +1,18 @@
 {
     "format": "alignment",
-    "version": "0.3",
-    "records": [
+    "version": "0.4",
+    "groups": [
         {
-            "type": "translation",
-            "source": [],
-            "target": [],
-            "meta": {
-                "creator": "some-aligner"
-            }
+            "records": [
+                {
+                    "type": "translation",
+                    "source": [],
+                    "target": [],
+                    "meta": {
+                        "creator": "some-aligner"
+                    }
+                }
+            ]
         }
     ]
 }

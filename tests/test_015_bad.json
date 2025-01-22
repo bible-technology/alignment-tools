@@ -1,15 +1,19 @@
 {
     "format": "alignment",
-    "version": "0.3",
-    "records": [
-        {
-            "type": "translation",
-            "source": {},
-            "target": {},
-            "references": [],
-            "meta": {
-                "creator": "some-aligner"
-            }
+    "version": "0.4",
+    "groups": [
+            {
+            "records": [
+                {
+                    "type": "translation",
+                    "source": {},
+                    "target": {},
+                    "references": [],
+                    "meta": {
+                        "creator": "some-aligner"
+                    }
+                }
+            ]
         }
     ]
 }

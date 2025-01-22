@@ -1,23 +1,27 @@
 {
     "format": "alignment",
-    "version": "0.3",
-    "records": [
+    "version": "0.4",
+    "groups": [
         {
-            "type": "translation",
-            "source": {
-                "scheme": "...",
-                "docid": "...",
-                "selectors": ["selector1", "selector2"]
-            },
-            "target": {
-                "scheme": "...",
-                "docid": "...",
-                "selectors": ["selector3"]
-            },
-            "meta": {
-                "creator": "some-aligner",
-                "confidence": 0.9
-            }
+            "records": [
+                {
+                    "type": "translation",
+                    "source": {
+                        "scheme": "...",
+                        "docid": "...",
+                        "selectors": ["selector1", "selector2"]
+                    },
+                    "target": {
+                        "scheme": "...",
+                        "docid": "...",
+                        "selectors": ["selector3"]
+                    },
+                    "meta": {
+                        "creator": "some-aligner",
+                        "confidence": 0.9
+                    }
+                }
+            ]
         }
     ]
 }

@@ -1,21 +1,22 @@
 {
     "format": "alignment",
-    "version": "0.3",
-    "records": [
+    "version": "0.4",
+    "groups": [
         {
-            "type": "translation",
-            "references": [{
-                "scheme": 123,
-                "docid": "1",
-                "selectors": ["selector1", "selector2"]
-            }, {
-                "scheme": "my-scheme",
-                "docid": "2",
-                "selectors": ["selector1"]
-            }],
-            "meta": {
-                "creator": "some-aligner"
-            }
+            "records": [
+                {
+                    "type": "translation",
+                    "references": [{
+                        "scheme": 123,
+                        "docid": "1",
+                        "selectors": ["selector1", "selector2"]
+                    }, {
+                        "scheme": "my-scheme",
+                        "docid": "2",
+                        "selectors": ["selector1"]
+                    }]
+                }
+            ]
         }
     ]
 }

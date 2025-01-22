@@ -1,9 +1,13 @@
 {
     "format": "alignment",
-    "version": "0.3",
-    "records": [
+    "version": "0.4",
+    "groups": [
         {
-            "type": "translation"
+            "records": [
+                {
+                    "type": "translation"
+                }
+            ]
         }
     ]
 }
