@@ -1,0 +1,11 @@
+{
+    "format": "alignment",
+    "version": "0.4",
+    "groups": [
+        {
+            "records": [
+                "bad record"
+            ]
+        }
+    ]
+}
