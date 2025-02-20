@@ -1,0 +1,98 @@
+{
+  "$defs": {
+    "referenceUnit": {
+      "oneOf": [
+        { "$ref": "#/$defs/referenceUnitObject" },
+        { "$ref": "#/$defs/selectorArray" }
+      ]
+    },
+    "selectorArray": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "referenceUnitObject": {
+      "type": "object",
+      "properties": {
+        "scheme": { "type": "string" },
+        "docid": { "type": "string" },
+        "selectors": { "$ref": "#/$defs/selectorArray" }
+      },
+      "required": ["scheme", "docid", "selectors"]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "format": { "type": "string" },
+    "version": { "type": "string" },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string" },
+          "records": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "required": ["references"]
+                },
+                {
+                  "required": ["source", "target"]
+                }
+              ],
+              "properties": {
+                "type": { "type": "string" },
+                "meta": { "type": "object" },
+                "references": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": { "$ref": "#/$defs/referenceUnit" }
+                },
+                "source": { "$ref": "#/$defs/referenceUnit" },
+                "target": { "$ref": "#/$defs/referenceUnit" }
+              }
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "not": {
+                "required": ["type"]
+              }
+            },
+            "then": {
+              "properties": {
+                "records": {
+                  "items": {
+                    "required": ["type"]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "required": ["type"]
+            },
+            "then": {
+              "properties": {
+                "records": {
+                  "items": {
+                    "not": {
+                      "required": ["type"]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "required": ["format", "version", "groups"],
+  "additionalProperties": false
+}
