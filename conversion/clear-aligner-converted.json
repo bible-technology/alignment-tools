@@ -1,0 +1,68 @@
+{
+  "format": "alignment",
+  "version": "0.4",
+  "groups": [
+    {
+      "type": "translation",
+      "records": [
+        {
+          "meta": {
+            "id": "d6820b2b-1a30-4247-a16f-18ed0c89b469",
+            "origin": "manual",
+            "status": "needsReview",
+            "note": [
+              {
+                "note": "This is how a note is stored.",
+                "id": "687280fd-386e-4263-bbab-de0373331086",
+                "authorEmail": "name@domain.com"
+              }
+            ]
+          },
+          "source": [
+            "40001001001"
+          ],
+          "target": [
+            "40001001001",
+            "40001001002",
+            "40001001003",
+            "40001001004"
+          ]
+        },
+        {
+          "meta": {
+            "id": "6eb56565-e097-4108-9368-f9e2e715b5f0",
+            "origin": "manual",
+            "status": "created",
+            "note": []
+          },
+          "source": [
+            "40001001002"
+          ],
+          "target": [
+            "40001001005",
+            "40001001006",
+            "40001001007"
+          ]
+        },
+        {
+          "meta": {
+            "id": "ad64567f-b3c0-4e0e-9e8a-3a96ad1c621f",
+            "origin": "manual",
+            "status": "approved",
+            "note": []
+          },
+          "source": [
+            "40001001003"
+          ],
+          "target": [
+            "40001001008",
+            "40001001009"
+          ]
+        }
+      ],
+      "meta": {
+        "creator": "ClearAligner"
+      }
+    }
+  ]
+}
