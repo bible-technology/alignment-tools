@@ -52,3 +52,7 @@ test("tests/test_030.json")
 test("tests/test_031_bad.json", 6)
 test("tests/test_032.json")
 test("tests/test_033.json")
+test("tests/test_034_bad.json", 20)
+test("tests/test_035_bad.json", 21)
+
+test("conversion/clear-aligner-converted.json")

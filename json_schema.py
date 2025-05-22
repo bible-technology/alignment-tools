@@ -59,8 +59,16 @@ test("tests/test_024_bad.json", True)
 test("tests/test_025_bad.json", True)
 test("tests/test_026_bad.json", True)
 test("tests/test_027.json")
-# test("tests/test_028.json")
-# test("tests/test_029.json")
+test("tests/test_028.json")
+test("tests/test_029.json")
 test("tests/test_030.json")
 
+test("tests/test_031_bad.json", True)
+test("tests/test_032.json")
+test("tests/test_033.json")
+
+test("tests/test_034_bad.json")
+test("tests/test_035_bad.json")
+
+test("conversion/clear-aligner-converted.json")
 

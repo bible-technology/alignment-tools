@@ -1,14 +1,20 @@
 import json
 
 
-def validate_reference_unit(reference_unit):
+def validate_reference_unit(reference_unit, document_hoist):
     if isinstance(reference_unit, list):
-        for selector in reference_unit:
-            if not isinstance(selector, str):
-                return (15, 'Each selector must be a string')
+        if document_hoist.get("scheme"):
+            for selector in reference_unit:
+                if not isinstance(selector, str):
+                    return (15, 'Each selector must be a string')
+        else:
+            return (20, 'A reference unit can only be a list of selectors if the scheme is hoisted')
     elif isinstance(reference_unit, dict):
-        if reference_unit.keys() != {"scheme", "docid", "selectors"}:
-            return (12, 'A reference unit object must have "scheme", "docid", and "selectors" and no other properties')
+        for key in reference_unit.keys():
+            if key not in ["scheme", "docid", "selectors"]:
+                return (12, 'A reference unit object must have only have "scheme", "docid", and "selectors" properties')
+        if "scheme" not in reference_unit.keys() and "scheme" not in document_hoist.keys():
+            return (21, 'If "scheme" is not present on a reference unit, it must be present on the document hoist')
         if not isinstance(reference_unit["scheme"], str):
             return (16, 'The "scheme" property must be a string')
         if not isinstance(reference_unit["docid"], str):
@@ -55,14 +61,14 @@ def validate(filename):
             for key, value in record.items():
                 if key not in ["type", "meta", "references"]:
                     # unit role
-                    result = validate_reference_unit(value)
+                    result = validate_reference_unit(value, group)
                     if result is not None:
                         return result
             if "references" in record:
                 if record["references"] == []:
                     return (14, 'A references list cannot be empty')
                 for reference_unit in record["references"]:
-                    result = validate_reference_unit(reference_unit)
+                    result = validate_reference_unit(reference_unit, group)
                     if result is not None:
                         return result
 

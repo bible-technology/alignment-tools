@@ -6,8 +6,8 @@
             "records": [
                 {
                     "type": "translation",
-                    "source": [],
-                    "target": [],
+                    "source": {},
+                    "target": {},
                     "meta": {
                         "creator": "some-aligner"
                     }
