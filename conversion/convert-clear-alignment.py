@@ -1,16 +1,19 @@
 import json
 
+# `format` and `version` are required
+# as of 0.4, the alignment spec requires an explicit `groups`
+# a `scheme` needs to be declared
+
 
 def convert(inp):
+    group = {}
+    group["type"] = inp["type"]
+    if "meta" in inp:
+        group["meta"] = inp["meta"]
     records = []
     for record in inp["records"]:
         records.append(record)
-    group = {
-        "type": inp["type"],
-        "records": records,
-    }
-    if "meta" in inp:
-        group["meta"] = inp["meta"]
+    group["records"] = records
     out = {
         "format": "alignment",
         "version": "0.4",

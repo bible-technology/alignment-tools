@@ -4,6 +4,9 @@
   "groups": [
     {
       "type": "translation",
+      "meta": {
+        "creator": "ClearAligner"
+      },
       "records": [
         {
           "meta": {
@@ -59,10 +62,7 @@
             "40001001009"
           ]
         }
-      ],
-      "meta": {
-        "creator": "ClearAligner"
-      }
+      ]
     }
   ]
 }
